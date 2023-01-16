@@ -1,0 +1,26 @@
+* Sidekiq
+    # 1.st tab
+    > be sidekiq -r ./app/workers/example_job.rb
+
+    # 2.nd tab
+    > be rails c
+    > ExampleJob.perform_async("easy")
+
+    # go to http://localhost:9000/sidekiq/busy and get thread id (TID) of busy worker (3b7r)
+    > ps ax|grep sidekiq
+        #=> 161871 pts/9    Sl+    0:03 sidekiq 6.5.8  [1 of 10 busy]
+
+    Signals:
+      1) TTIN signal
+          - for Debugging - check what Ruby code exactly is stucked job(worker) executing
+
+          Example:
+            > kill -TTIN 161871
+                (https://www.computerhope.com/unix/signals.htm)
+
+            # search for TID(3b7r) in sidekiq worker tab
+              #=> he should be in sleep - since there is an error
+              2022-12-15T13:07:10.984Z pid=161871 tid=3g67 WARN: Thread TID-3b7r processor
+              2022-12-15T13:07:10.984Z pid=161871 tid=3g67 WARN: /home/ubuntu/projects/ruby_ci_test_app/app/workers/example_job.rb:15:in `sleep'
+
+      2) USR1 signal
