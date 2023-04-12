@@ -18,4 +18,8 @@ RSpec.describe 'Item' do
   it 'test something 3' do
     expect(true).to be true
   end
+
+  it 'test something 4' do
+    expect(true).to be true
+  end
 end
