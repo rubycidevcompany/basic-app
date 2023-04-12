@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Item' do
-  let(:item) {
+  let(:item) do
     Item.create!(
       name: 'MyString'
     )
-  }
+  end
 
   it 'test something' do
     expect(item).to be_valid
