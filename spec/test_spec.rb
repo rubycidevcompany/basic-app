@@ -27,4 +27,3 @@ RSpec.describe 'Item' do
     expect(true).to be false
   end
 end
-
