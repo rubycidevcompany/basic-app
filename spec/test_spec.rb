@@ -28,6 +28,6 @@ RSpec.describe 'Item' do
   end
 
   it 'test something 6' do
-    expect(true).to
+    expect(true).to 123
   end
 end
