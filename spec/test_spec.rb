@@ -28,6 +28,7 @@ RSpec.describe 'Item' do
   end
 
   it 'test something 6' do
+    TestConstant.new
     expect(true).to be true
   end
 end
