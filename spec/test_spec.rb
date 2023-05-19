@@ -20,6 +20,7 @@ RSpec.describe 'Item' do
   end
 
   it 'test something 4' do
+    skip("test skipped")
     expect(true).to be true
   end
 
