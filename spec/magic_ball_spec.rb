@@ -2,7 +2,7 @@ require 'rails_helper'
 
 require "minitest/autorun"
 require "minitest/spec"
-require_relative "magic_ball"
+require "./app/magic_ball"
 
 describe MagicBall do
   describe "#ask" do
