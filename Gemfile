@@ -73,5 +73,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem "minitest"
+  # gem "minitest"
+  gem 'minitest-rails'
 end
