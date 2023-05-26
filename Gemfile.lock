@@ -123,6 +123,8 @@ GEM
       minitest (~> 5.10)
       railties (~> 7.0.0)
     msgpack (1.7.0)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.4)
       date
       net-protocol
@@ -240,6 +242,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    uri (0.12.1)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -266,8 +269,11 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  minitest
   minitest-rails
+  net-http
+  net-imap
+  net-protocol
+  net-smtp
   puma (~> 5.0)
   rails (~> 7.0.4)
   redis (~> 4.0)
