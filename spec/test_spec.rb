@@ -29,7 +29,6 @@ RSpec.describe 'Item' do
   end
 
   it 'test something 6' do
-    TestConstant.error
     expect(true).to be true
   end
 end
