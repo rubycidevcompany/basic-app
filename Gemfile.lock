@@ -268,7 +268,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   redis (~> 4.0)
   rspec-rails
-  rubocop (~> 1.48)
+  rubocop
   selenium-webdriver
   simplecov
   sprockets-rails

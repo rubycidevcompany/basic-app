@@ -54,7 +54,7 @@ group :development, :test do
   gem "rspec-rails"
   
   gem "simplecov"
-  gem 'rubocop', '~> 1.48'
+  gem 'rubocop'
 end
 
 group :development do
