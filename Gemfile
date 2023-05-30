@@ -1,4 +1,4 @@
-# source "https://rubygems.org"
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.2"
@@ -54,7 +54,7 @@ group :development, :test do
   gem "rspec-rails"
   
   gem "simplecov"
-  gem 'rubocop'
+  # gem 'rubocop'
 end
 
 group :development do
