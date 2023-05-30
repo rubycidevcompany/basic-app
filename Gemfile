@@ -54,7 +54,7 @@ group :development, :test do
   gem "rspec-rails"
   
   gem "simplecov"
-  gem 'rubocop', "1.48.1"
+  gem 'rubocop', '~> 1.48', require: false
 end
 
 group :development do
