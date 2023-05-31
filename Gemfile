@@ -55,7 +55,6 @@ group :development, :test do
   
   gem "simplecov"
   gem "rubocop"
-  gem "standard", "> 1.0"
 end
 
 group :development do
