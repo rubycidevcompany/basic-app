@@ -32,4 +32,3 @@ RSpec.describe 'Item' do
     expect(true).to be true
   end
 end
-end
