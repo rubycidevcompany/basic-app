@@ -73,4 +73,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'net-http', require: false
+  gem 'net-imap', require: false
+  gem 'net-protocol', require: false
+  gem 'net-smtp', require: false
 end
