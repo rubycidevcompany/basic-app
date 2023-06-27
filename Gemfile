@@ -55,6 +55,7 @@ group :development, :test do
   
   gem "simplecov"
   gem "rubocop"
+  gem "reek"
 end
 
 group :development do
