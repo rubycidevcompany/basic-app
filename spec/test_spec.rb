@@ -1,34 +1,36 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Item' do
+RSpec.describe "Item" do
   let(:item) do
     Item.create!(
-      name: 'MyString'
+      name: "MyString"
     )
   end
 
-  it 'test something' do
+  it "test something" do
     expect(item).to be_valid
   end
 
-  xit 'test something 2' do
+  xit "test something 2" do
     expect(true).to be true
   end
 
-  xit 'test something 3' do
+  xit "test something 3" do
     expect(true).to be true
   end
 
-  it 'test something 4' do
+  it "test something 4" do
     skip("test skipped")
     expect(true).to be true
   end
 
-  it 'test something 5' do
+  it "test something 5" do
     expect(true).to be true
   end
 
-  it 'test something 6' do
+  it "test something 6" do
     expect(true).to be true
+
+    
   end
 end
