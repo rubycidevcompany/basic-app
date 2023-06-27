@@ -31,8 +31,4 @@ RSpec.describe 'Item' do
   it 'test something 6' do
     expect(true).to be true
   end
-
-  def smelly_method foo
-    foo.each {|bar| bar.each {|baz| baz.qux}}
-  end
 end
