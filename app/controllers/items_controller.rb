@@ -45,6 +45,7 @@ class ItemsController < ApplicationController
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
+    public_send(params[:status])
   end
 
   # DELETE /items/1 or /items/1.json
