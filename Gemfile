@@ -55,6 +55,7 @@ group :development, :test do
   
   gem "simplecov"
   gem "rubocop"
+  gem 'brakeman'
 end
 
 group :development do
