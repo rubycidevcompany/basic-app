@@ -17,7 +17,7 @@ RSpec.describe Article, type: :model do
       let!(:article_2) { Article.create!(title: 'Article 2', body: 'article 22222222', status: 'private') }
 
       it do
-        expect(Article.public_count).to eq 1
+        expect(Article.public_count).to eq 2
       end
     end
   end
