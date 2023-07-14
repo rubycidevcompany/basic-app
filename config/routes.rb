@@ -1,7 +1,13 @@
-Rails.application.routes.draw do
-  resources :items
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+# require 'sidekiq/web'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+Rails.application.routes.draw do
+  root "articles#index"
+
+  # mount Sidekiq::Web => "/sidekiq"
+
+  # get "/articles", to: "articles#index"
+  # get "/articles/:id", to: "articles#show"
+  resources :articles do
+    resources :comments
+  end
 end

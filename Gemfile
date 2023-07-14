@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.2"
+ruby "3.0.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -9,8 +9,8 @@ gem "rails", "~> 7.0.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# Use postgresql as the database for Active Record
+gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+# gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -48,13 +48,26 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "simplecov", require: false, group: :test
+
+gem "rubocop"
+
+# Enforce Rails best practices and coding conventions
+gem 'rubocop-rails', require: false
+# Thread-safety analysis
+gem 'rubocop-thread_safety', require: false
+# Performance optimization analysis
+gem 'rubocop-performance', require: false
+# Minitest-specific analysis
+gem 'rubocop-minitest', require: false
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  # gem "rspec-rails"
-  
-  gem "simplecov"
-  gem 'rubocop'
+  gem 'rspec-rails', '~> 6.0.0'
+  gem 'factory_bot_rails'
+  gem 'pry-byebug'
+  gem "standard"
 end
 
 group :development do
@@ -73,10 +86,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  # gem "minitest"
-  gem 'minitest-rails'
-  gem 'net-http', require: false
-  gem 'net-imap', require: false
-  gem 'net-protocol', require: false
-  gem 'net-smtp', require: false
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'database_cleaner'
 end
