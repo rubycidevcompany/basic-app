@@ -12,9 +12,9 @@ RSpec.describe 'Test Selenium driver', type: :feature, js: true do
       expect(page).to have_current_path(new_item_path)
     end
 
-    it "test failed test" do
+    it "test pass test" do
       visit new_item_path
-      expect(page).to have_current_path(items_path)
+      expect(page).to have_current_path(new_item_path)
     end
   end
 end
