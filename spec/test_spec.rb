@@ -31,6 +31,31 @@ RSpec.describe 'Item' do
   it 'test something 6' do
     expect(true).to be true
   end
+  
+  it 'test something' do
+    expect(item).not_to be_valid
+  end
+
+  xit 'test something 2' do
+    expect(true).to be true
+  end
+
+  xit 'test something 3' do
+    expect(true).to be true
+  end
+
+  it 'test something 4' do
+    skip("test skipped")
+    expect(true).to be true
+  end
+
+  it 'test something 5' do
+    expect(true).to be true
+  end
+
+  it 'test something 6' do
+    expect(true).to be true
+  end
 end
 
 
