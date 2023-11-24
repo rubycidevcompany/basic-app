@@ -8,7 +8,7 @@ RSpec.describe 'Item' do
   end
 
   it 'test something' do
-    expect(item).to be_valid
+    expect(item).not_to be_valid
   end
 
   xit 'test something 2' do
