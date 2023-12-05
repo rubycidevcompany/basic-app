@@ -11,11 +11,11 @@ RSpec.describe 'Item' do
     expect(item).to be_valid
   end
 
-  xit 'test something 2' do
+  it 'test something 2' do
     expect(true).to be true
   end
 
-  xit 'test something 3' do
+  it 'test something 3' do
     expect(true).to be true
   end
 
