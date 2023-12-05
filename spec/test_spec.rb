@@ -31,6 +31,10 @@ RSpec.describe 'Item' do
   it 'test something 6' do
     expect(true).to be true
   end
+
+  it 'test something 6' do
+    expect(true).to be true
+  end
 end
 
 class Dirty
